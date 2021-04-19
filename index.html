@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FTL: Прямая машина</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <form action="" class="form-car">
+    <h3 class="form-car__title">FTL: Прямая машина</h3>
+    <div class="form-car__wrapper">
+      <div class="form-car__route route">
+        <div class="route__title">
+          <span class="route__circle circle">1</span>
+          <p class="route__text">Маршрут</p>
+        </div>
+        <div class="route__form">
+          <label for="whence">Откуда</label>
+          <input type="text" name="whence">
+          <label for="where">Куда</label>
+          <input type="text" name="where">
+        </div>
+      </div>
+      <div class="form-car__transport transport">
+        <div class="transport__title">
+          <span class="transport__circle circle">2</span>
+          <p class="transport__text">Транспорт</p>
+        </div>
+        <div class="transport__form">
+          <div class="transport__form-carrying">
+            <label>Грузоподъёмность</label>
+            <select class="select" name="carrying">
+              <option disabled>Не выбран</option>
+              <option value="version1">Вариант 1</option>
+              <option value="version2">Вариант 2</option>
+              <option value="version3">Вариант 3</option>
+              <option value="version4">Вариант 4</option>
+              <option value="version5">Вариант 5</option>
+            </select>
+          </div>
+          <div class="transport__form-loading">
+            <label>Способ погрузки</label>
+            <select class="select" name="loading">
+              <option disabled>Не выбран</option>
+              <option value="back">Задняя</option>
+              <option value="Upper">Верхняя</option>
+              <option value="Side">Боковая</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <!-- cargo -->
+      <div class="form-car__cargo cargo">
+        <div class="cargo__title">
+          <span class="cargo__circle circle">3</span>
+          <p class="cargo__text">Груз</p>
+        </div>
+        <div class="cargo__form">
+          <div class="cargo__form-type">
+            <label>Тип груза</label>
+            <select class="select" name="type">
+              <option disabled>Не выбран</option>
+              <option value="version1">Вариант 1</option>
+              <option value="version2">Вариант 2</option>
+              <option value="version3">Вариант 3</option>
+              <option value="version4">Вариант 4</option>
+              <option value="version5">Вариант 5</option>
+            </select>
+          </div>
+          <div class="cargo__form-danger">
+            <label>Класс опасности</label>
+            <select class="select" name="danger">
+              <option disabled>Не выбран</option>
+              <option value="class1">1 класс</option>
+              <option value="class2">2 класс</option>
+              <option value="class3">3 класс</option>
+              <option value="class4.1">4.1 класс</option>
+              <option value="class4.2">4.2 класс</option>
+            </select>
+          </div>
+          <div class="cargo__form-worth">
+            <label for="where">Объявленная ценность, ₽</label>
+            <input type="text" placeholder="≥ 1">
+          </div>
+
+        </div>
+        <div class="cargo__temperature">
+          <div class="cargo__temperature-checkbox">
+            <input type="checkbox" class="custom-checkbox" id="temperature" name="temperature" value="yes">
+            <label for="temperature">Требуется температурный режим</label>
+          </div>
+
+          <div class="cargo__temperature-form">
+            <div class="cargo__temperature-down">
+              <label for="down">От, °C</label>
+              <input type="text" placeholder="-20" name="down">
+            </div>
+            <div class="cargo__temperature-up">
+              <label for="up">До, °C</label>
+              <input type="text" placeholder="+23" name="up">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- time -->
+      <div class="form-car__time time">
+        <div class="time__title">
+          <span class="time__circle circle">4</span>
+          <p class="time__text">Время</p>
+        </div>
+        <div class="time__form">
+          <div class="time__form-info">
+            <span>Когда прибыть на точку</span>
+            <span>700 км в день</span>
+          </div>
+          <div class="address">
+            <input type="text" placeholder="Адрес не указан">
+            <button type="button" class="address__button">НЕ ВЫБРАНО</button>
+          </div>
+          <div class="address address-disabled">
+            <input type="text" placeholder="Адрес не указан">
+            <button type="button" class="address__button" disabled>НЕ ВЫБРАНО</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="comments">
+        <label>Комментарий к заказу</label>
+        <textarea name="comments-text" class="comments__text"
+          placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+      </div>
+    </div>
+    <div class="popup">
+      <p class="popup__text">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
+    </div>
+  </form>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
